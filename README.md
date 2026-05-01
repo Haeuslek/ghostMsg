@@ -48,7 +48,7 @@ pip install cryptography
 ### Run directly (no install)
 
 ```bash
-git clone https://github.com/example/ghostchat
+git clone https://github.com/Haeuslek/ghostMsg.git
 cd ghostchat
 pip install cryptography
 python ghostchat/ghostchat.py --host 5555
