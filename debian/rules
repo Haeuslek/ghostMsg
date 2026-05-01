@@ -1,0 +1,23 @@
+#!/usr/bin/make -f
+# debian/rules — debhelper build rules for ghostchat
+
+export PYTHONDONTWRITEBYTECODE = 1
+export DH_VERBOSE = 1
+
+%:
+	dh $@ --with python3
+
+# ghostchat is a plain-Python package; skip the auto build step.
+override_dh_auto_build:
+
+# Install Python modules + wrapper script, then fix permissions.
+override_dh_auto_install:
+	mkdir -p debian/ghostchat/usr/share/ghostchat
+	install -m 644 ghostchat/ghostchat.py \
+	              ghostchat/crypto.py     \
+	              ghostchat/network.py    \
+	              ghostchat/tui.py        \
+	              ghostchat/session.py    \
+	              debian/ghostchat/usr/share/ghostchat/
+	mkdir -p debian/ghostchat/usr/bin
+	install -m 755 debian/ghostchat.sh debian/ghostchat/usr/bin/ghostchat

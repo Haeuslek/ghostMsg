@@ -1,0 +1,10 @@
+ghostchat (1.0.0) unstable; urgency=low
+
+  * Initial release.
+  * X25519 ECDH + AES-256-GCM encrypted P2P terminal chat.
+  * Curses TUI with split-pane layout and colour-coded messages.
+  * Optional passphrase gate via Scrypt + HMAC-SHA256.
+  * In-chat commands: /quit, /clear, /burn, /whoami, /ping.
+  * Zero disk writes — fully ephemeral session.
+
+ -- ghostchat maintainer <ghostchat@example.com>  Thu, 01 May 2026 00:00:00 +0000

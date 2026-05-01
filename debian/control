@@ -1,0 +1,24 @@
+Source: ghostchat
+Section: net
+Priority: optional
+Maintainer: ghostchat maintainer <ghostchat@example.com>
+Build-Depends: debhelper-compat (= 13), dh-python, python3-all
+Standards-Version: 4.6.2
+Homepage: https://github.com/example/ghostchat
+Rules-Requires-Root: no
+
+Package: ghostchat
+Architecture: all
+Depends: ${python3:Depends}, ${misc:Depends}, python3, python3-cryptography
+Description: Ephemeral encrypted P2P terminal messenger
+ ghostchat is a peer-to-peer encrypted terminal chat application that
+ leaves no trace. All key material and messages live only in RAM and
+ are wiped on session end.
+ .
+ Features:
+  * X25519 ECDH key exchange with HKDF-SHA256 key derivation
+  * AES-256-GCM per-message encryption with random nonces
+  * Optional passphrase gate via Scrypt + HMAC-SHA256
+  * Curses TUI with split-pane chat layout
+  * Zero disk writes — no logs, no temp files, no bytecode cache
+  * Self-destruct (/burn) command to wipe both peers simultaneously

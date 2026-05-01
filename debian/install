@@ -1,0 +1,6 @@
+ghostchat/ghostchat.py usr/share/ghostchat
+ghostchat/crypto.py    usr/share/ghostchat
+ghostchat/network.py   usr/share/ghostchat
+ghostchat/tui.py       usr/share/ghostchat
+ghostchat/session.py   usr/share/ghostchat
+debian/ghostchat.sh    usr/bin
